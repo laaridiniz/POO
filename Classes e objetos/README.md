@@ -12,7 +12,7 @@ Um paradigma de programação pode ser:<br>
 <br>
 <b>c) Reativo:</b> é uma forma de programar a eventos ou alterações nos estados da aplicação. Com isso, a sintaxe do código e as funções executadas pelo programa sempre são feitas de forma que respondam a possíveis ações interpretadas pela máquina. A linguagem de programação JavaScript, que conta com funções multi-paradigmas, pode ter a biblioteca React implementada, permitindo esse tipo de desenvolvimento nela.(Branco).<br>
 <br>
-O paradigma de programação orientada à objetos faz parte do grupo imperativo, já que com essa técnica, o desenvolvedor define as instruções que deverão ser executadas e a ordem dessas execuções.<br>
+O paradigma de programação orientada à objetos faz parte do grupo imperativo, já que com essa técnica o desenvolvedor define as instruções que deverão ser executadas e a ordem dessas execuções.<br>
 <br>
 Na programação orientada à objetos, os objetos do mundo real são vistos como entidades separadas com seu próprio estado e esse estado é modificado apenas por procedimentos internos, chamados métodos. Em outras palavras, cada objeto tem suas próprias propriedades ou atributos, podendo conter também seus próprios procedimentos ou métodos.<br>
 <br>
@@ -26,7 +26,6 @@ Pensando em otimizar a utilização da memória, é comum definir um tipo de dad
 <br>
 Existem os chamados <b>tipos primitivos</b>, que são tipos de dados básicos fornecidos pela linguagem de programação. Em JavaScript, por exemplo, um tipo primitivo corresponde a um tipo de dado que não é, necessariamente, um objeto. Além disso, a linguagem conta com 7 tipos de dados primitivos: string, number, bigint, boolean, undefined, symbol e null.
 Os tipos string, number e boolean são os mais comumente usados:
-<br>
 </p>
 
 ```
@@ -35,7 +34,25 @@ let numero = 27
 let booleano = true
 ```
 
+<p align="justify">A partir dos tipos primitivos pode-se criar outros tipos, compostos e mais complexos, como objetos.<br>
 <br>
+Para declarar uma variável em TypeScript usa-se <b>var</b>, <b>let</b> ou <b>const</b>, e a anotação de tipo é opcional. A anotação de tipo é o que especifica explicitamente o tipo da variável, como ocorre a seguir:<br></p>
+
+```
+let texto:string = 'string'
+let numero:number = 27
+let booleano:boolean = true
+```
+
+<p align="justify">Caso o desenvolvedor opte por inserir a anotação de tipo na variável, ele deverá inserí-la <b>após o nome da variável</b>, assim como demonstrado.<br>
+<br>O compilador TypeScript costuma tentar inferir automaticamente os tipos no código. Por exemplo, o tipo de uma variável pode ser inferido com base no seu valor. Portanto, para a linguagem TypeScript, os códigos transcritos acima são equivalentes, ainda que um não tenha a anotação de tipo na declaração da variável e o outro tenha.<br>
+<br>Em se tratando de TypeScript, é importante mencionar que ela conta com um tipo indefinido chamado <b>any</b>, que é usado quando não se quer atribuir um tipo explicitamente ou quando não se quer colocar “certeza” no tipo da variável. Além disso, o compilador TypeScript também assumirá como padrão any quando houver uma variável cujo tipo não está especificado e o compilador TypeScript não pode inferir qual é esse tipo a partir do contexto, como ocorre com o trecho de código abaixo:<br></p>
+
+```
+let cumprimento = (mensagem:any) => {
+    console.log(`Bem-vindo: ${mensagem}`)
+}
+```
 
 ## Referências:
 
