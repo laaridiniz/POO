@@ -54,6 +54,105 @@ let cumprimento = (mensagem:any) => {
 }
 ```
 
+<p align="justify">O TypeScript permite a especificação dos tipos de valores de entrada e saída das funções. As anotações de tipo de retorno aparecem após a lista de parâmetros.Assim como com variáveis, também ocorre a inferência do tipo de retorno, se ele não for definido explicitamente.<br>
+<br>
+O TypeScript também permite a combinação dos tipos, o que é designado como <b>união de tipos</b>. Essa união cria um novo tipo, que é formado a partir de dois ou mais tipos, e representa valores que podem ser de qualquer um dos tipos da união. Esse novo tipo é referido como união de membros e ocorre da seguinte forma:
+<br></p>
+
+```
+let mensagem = (informacao: string | number): string => {
+    return `Informação: ${informacao}`
+}
+```
+<p align="justify">Importante destacar que o compilador TypeScript só permitirá que se faça coisas com união de membros se isso for válido para todos os tipos usados na união. Por exemplo, para a união dos tipos string e number, não pode-se usar métodos que estão disponíveis apenas em string. Por esse motivo, quando o código abaixo é inserido em um editor, a expressão "toUpperCase" aparece grifada de vermelho:
+<br></p>
+
+```
+let mensagem = (informacao: string | number): string => {
+    return `Informação: ${informacao.toUpperCase()}`
+}
+```
+<p align="justify">Pode-se definir tipos com objetos, que são usados como apelidos para dados complexos.<br>
+<br>
+Obs.: No TypeScript, criar um novo tipo não é obrigatório, mas pode ser conveniente.<br></p>
+
+```
+type Telefone = {
+    ddd:string
+    numero:string
+}
+
+let mensagem = (informacao: Telefone): string => {
+    return `ddd: ${informacao.ddd} número: ${informacao.numero}`
+}
+```
+
+<p align="justify">O interpretador JavaScript oferece suporte a um operador de tipo, o <b>typeof</b>. Este operador pode fornecer informações muito básicas sobre o tipo do valor de uma variável, em tempo de execução. Este operador também está disponível para TypeScript.<br></p>
+
+```
+let mensagem = (informacao: string | number): string => {
+    if (typeof informacao === string) {
+        return `informação recebida: ${informacao.toUpperCase()}`
+    } else {
+        return `informação recebida: ${informacao}`
+    }
+}
+```
+<p align="justify">O typeof fará a comparação dos tipos pelo nome.<br>
+<br>
+<b>IMPORTANTE!</b><br>
+Em JavaScript existem dois tipos de operadores de igualdade:<br>
+</p>
+
+* Para comparar a igualdade de valores, usa-se “==”.
+* Para comparar a igualdade de valores e tipos, usa-se “===”.<br>
+
+<p align="justify">O <b>typeof</b> consegue descobrir se uma variável possui algum dos tipos: “string”, “number”, “bigint”, “boolean”, “symbol”, “undefined”, “object”, “function”.<br>
+<br>
+<b>CONCEITO DE OBJETO</b>:<br>
+<br>
+É possível definir um objeto como um elemento (instância) de uma classe. Objetos têm os comportamentos de sua classe. O objeto é o componente real dos programas, enquanto a classe especifica como as instâncias são criadas e como se comportam. Um objeto pode ser uma variável, uma estrutura de dados, uma função ou um método e, como tal, é um valor na memória referenciado por um identificador. Um objeto pode ser uma combinação de variáveis, funções e estruturas de dados.<br>
+<br>
+<b>CONCEITO DE CLASSE</b>:<br>
+<br>
+Uma classe é uma forma de definir (declarar) um tipo especial de dado, ou seja, um tipo que não seja simples como um primitivo. Como analogia: assim como um engenheiro desenha a planta baixa de um imóvel, a classe é a planta baixa do objeto.<br>
+<br>
+No exemplo abaixo, foi criada a classe Endereço que define como será um objeto do tipo endereço, determinando quais dados ele irá possuir e qual o tipo desses dados:<br>
+</p>
+
+```
+class Endereco {
+    private numero: string
+    private rua: string
+    private bairro: string
+    private cidade: string
+    constructor(numero: string, rua: string, bairro: string, cidade: string){
+        this.numero = numero
+        this.rua = rua
+        this.bairro = bairro
+        this.cidade = cidade
+    }
+}
+```
+
+<p align="justify">Outro conceito importante é o de <b>atributos</b>. Os dados armazenados são chamados de atributos e eles não precisam ser do mesmo tipo. No desenvolvimento com o paradigma de programação orientada à objetos é comum chamar os atributos de campos ou membros de classe. No exemplo acima, os campos número, rua, bairro e cidade são os atributos.<br></p>
+<p> Além disso, temos o conceito de <b>método</b>. Toda classe pode ter comportamentos, algo que ela faz, e esse comportamento é definido por métodos. Métodos são funções definidas na classe, que todos os seus objetos terão. Dentro do corpo de um método, o acesso aos campos se dá por meio da palavra-chave “this”. A partir do exemplo anterior, pode-se criar um método para mostrar o endereço:<br>
+</p>
+
+```
+class Endereco {
+    public numero: string
+    public rua: string
+    public bairro: string
+    public cidade: string
+
+    public mostrarEndereco(){
+        return `Cidade ${this.cidade}, bairro ${this.bairro}, rua ${this.rua}, numero ${this.numero} `
+    }
+}
+```
+
+
 ## Referências:
 
 <p>https://canaltech.com.br/mercado/quais-as-diferencas-entre-programacao-imperativa-declarativa-e-reativa-212715/#:~:text=J%C3%A1%20o%20paradigma%20Declarativo%20%C3%A9,ap%C3%B3s%20a%20execu%C3%A7%C3%A3o%20do%20software
