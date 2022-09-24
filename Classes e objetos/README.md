@@ -152,6 +152,13 @@ class Endereco {
 }
 ```
 
+<p align="justify">A partir de uma classe pode-se criar quantos objetos se desejar. Todos irão conter os mesmos atributos e comportamentos definidos na classe.<br>
+</p>
+<p align="justify">Importante: as variáveis que armazenam objetos são especiais, são chamadas de <b>referências</b>. São ponteiros implícitos.<br>
+<br><b>CONCEITO DE REFERÊNCIA</b>:<br>
+<br> 
+Uma referência se refere a uma instância de uma classe, um objeto. Ao contrário dos tipos primitivos, que mantêm seus valores na memória onde a variável é alocada, as referências não mantêm o valor do objeto ao qual se referem. É como se fosse o "controle remoto" para um objeto e seus atributos. Em outras palavras, a referência não é o objeto em si, ela é o acesso a ele. Uma referência é uma variável que permite a um programa acessar indiretamente um dado particular, como um outro valor de uma outra variável.
+</p>
 
 ## Referências:
 
