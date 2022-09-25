@@ -1,4 +1,4 @@
-<h1 align="center">🔹Classes e Objetos🔹</h1>
+<h1 align="center">🔹Encapsulamento🔹</h1>
 
 <br id="topo">
 
