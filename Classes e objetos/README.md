@@ -184,10 +184,11 @@ Uma referência se refere a uma instância de uma classe - ou seja um objeto. Ao
 Os objetos ficam, armazenados, no heap de memória. Esse heap da memória é um local na memória onde a memória pode ser alocada em acesso aleatório. Ao contrário da pilha em que a memória é alocada e liberada em uma ordem muito definida, os elementos de dados individuais alocados no heap são normalmente liberados de forma assíncrona entre si. <br>
 <br>
 Em outras palavras, um objeto na memória, é como uma cápsula de valores.<br>
-<br>
-<b>MÉTODO CONSTRUTOR</b>:<br>
-<br>
-Toda classe possui um método construtor, que é utilizado para criar seus objetos. Seguindo o exemplo do endereço, esse método é escrito da seguinte forma:
+</p>
+
+## Método Construtor
+
+<p align="justify">Toda classe possui um método construtor, que é utilizado para criar seus objetos. Seguindo o exemplo do endereço, esse método é escrito da seguinte forma:
 <br>
 </p>
 
@@ -248,9 +249,21 @@ export default class Empresa {
 
 ## Representação UML
 
+<p align="justify">Usar diagramas UML é uma outra forma de representar classes, seus métodos e atributos.<br>
+<br>
+UML (Unified Modeling Language) é uma linguagem de modelagem usada por desenvolvedores de software. A UML pode ser usada para desenvolver diagramas e fornecer aos 
+usuários (programadores) exemplos de modelagem expressivos prontos para uso.<br>
+<br>
+Para o exemplo usado neste tema (Empresa>Telefone>Endereço), o diagrama fica da seguinte forma:<br>
+</p>
+
+<img src="imagens/UML-diagram.png" width="100%" height="100%">
 
 ## Referências:
 
 <p>https://canaltech.com.br/mercado/quais-as-diferencas-entre-programacao-imperativa-declarativa-e-reativa-212715/#:~:text=J%C3%A1%20o%20paradigma%20Declarativo%20%C3%A9,ap%C3%B3s%20a%20execu%C3%A7%C3%A3o%20do%20software
 <br>
-https://medium.com/@alexandre.malavasi/descomplicando-programa%C3%A7%C3%A3o-imperativa-declarativa-e-reativa-a481baa87742<br></p>
+https://medium.com/@alexandre.malavasi/descomplicando-programa%C3%A7%C3%A3o-imperativa-declarativa-e-reativa-a481baa87742
+<br>
+https://www.planttext.com/
+<br></p>
