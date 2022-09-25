@@ -186,6 +186,8 @@ Os objetos ficam, armazenados, no heap de memória. Esse heap da memória é um 
 Em outras palavras, um objeto na memória, é como uma cápsula de valores.<br>
 </p>
 
+→ [Voltar ao topo](#topo)
+
 ## Método Construtor
 
 <p align="justify">Toda classe possui um método construtor, que é utilizado para criar seus objetos. Seguindo o exemplo do endereço, esse método é escrito da seguinte forma:
@@ -247,6 +249,8 @@ export default class Empresa {
 
 <p align="justify">No paradigma de programação orientada à objetos é possível criar componentes reutilizáveis!</p>
 
+→ [Voltar ao topo](#topo)
+
 ## Representação UML
 
 <p align="justify">Usar diagramas UML é uma outra forma de representar classes, seus métodos e atributos.<br>
@@ -258,6 +262,8 @@ Para o exemplo usado neste tema (Empresa>Telefone>Endereço), o diagrama fica da
 </p>
 
 <img src="UML Diagram.png" width="100%" height="100%">
+
+→ [Voltar ao topo](#topo)
 
 ## Referências:
 
