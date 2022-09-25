@@ -157,8 +157,97 @@ class Endereco {
 <p align="justify">Importante: as variáveis que armazenam objetos são especiais, são chamadas de <b>referências</b>. São ponteiros implícitos.<br>
 <br><b>CONCEITO DE REFERÊNCIA</b>:<br>
 <br> 
-Uma referência se refere a uma instância de uma classe, um objeto. Ao contrário dos tipos primitivos, que mantêm seus valores na memória onde a variável é alocada, as referências não mantêm o valor do objeto ao qual se referem. É como se fosse o "controle remoto" para um objeto e seus atributos. Em outras palavras, a referência não é o objeto em si, ela é o acesso a ele. Uma referência é uma variável que permite a um programa acessar indiretamente um dado particular, como um outro valor de uma outra variável.
+Uma referência se refere a uma instância de uma classe, um objeto. Ao contrário dos tipos primitivos, que mantêm seus valores na memória onde a variável é alocada, as referências não mantêm o valor do objeto ao qual se referem. É como se fosse o "controle remoto" para um objeto e seus atributos. Em outras palavras, a referência não é o objeto em si, ela é o acesso a ele. Uma referência é uma variável que permite a um programa acessar indiretamente um dado particular, como um outro valor de uma outra variável.<br>
+<br>
+Seguindo o exemplo do endereço, é possível fazer a seguinte alteração:<br>
 </p>
+
+```
+import Endereco from "./endereco"
+
+let endereco = new Endereco (123, 'Av. Paulista', 'Jardim Paulista', 'São Paulo')
+
+let endereco2 = endereco
+endereco2.cidade = 'Campinas'
+
+console.log(endereco.mostrarEndereco())
+```
+
+<p align="justify">Qual endereço será impresso?<br>
+<br>
+Resposta: <b>Cidade: Campinas, bairro: Jardim Paulista, rua: Av. Paulista, número: 123</b>.<br>
+<br>
+Isso ocorre porque, ao determinar que "endereco2.cidade = 'Campinas'", estou alterando apenas o elemento "Cidade". Perceba a variável que está em uso, dentro do console.log. No paradigma de programação orientada à objetos não existe cópia direta dos atributos de um objeto. Acontece cópia de referência, por padrão.<br>
+<br>
+Uma referência se refere a uma instância de uma classe - ou seja um objeto. Ao contrário dos tipos primitivos que mantêm seus valores na memória onde a variável é alocada, as referências não mantêm o valor do objeto ao qual se referem, ela apontam para o endereço do objeto na memória.<br>
+<br>
+Os objetos ficam, armazenados, no heap de memória. Esse heap da memória é um local na memória onde a memória pode ser alocada em acesso aleatório. Ao contrário da pilha em que a memória é alocada e liberada em uma ordem muito definida, os elementos de dados individuais alocados no heap são normalmente liberados de forma assíncrona entre si. <br>
+<br>
+Em outras palavras, um objeto na memória, é como uma cápsula de valores.<br>
+<br>
+<b>MÉTODO CONSTRUTOR</b>:<br>
+<br>
+Toda classe possui um método construtor, que é utilizado para criar seus objetos. Seguindo o exemplo do endereço, esse método é escrito da seguinte forma:
+<br>
+</p>
+
+```
+export default class Endereco {
+    public numero: number
+    public rua: string
+    public bairro: string
+    public cidade: string
+
+    constructor(numero:number, rua:string, bairro:string, cidade:string){
+        this.numero = numero
+        this.rua = rua
+        this.bairro = bairro
+        this.cidade = cidade
+    }
+
+    public mostrarEndereco(){
+        return `Cidade: ${this.cidade}, bairro: ${this.bairro}, rua: ${this.rua}, número: ${this.numero}`
+    }
+}
+```
+
+<p align="justify">A palavra-chave “this” se refere ao próprio objeto (classe) atual em um método, que pode ser construtor ou não.<br>
+<br>
+Sendo assim, para criar um objeto a partir dessa classe, será necessário definir os parâmetros número, rua, bairro e cidade, nesta sequência, assim como ocorre a seguir:<br>
+</p>
+
+```
+let endereco = new Endereco (123, 'Av. Paulista', 'Jardim Bela Vista', 'São Paulo')
+let endereco2 = new Endereco (456, 'Engenheiro Ostoja Roguski', 'Jardim Botânico', 'Curitiba')
+```
+
+<p align="justify">Outro ponto importante é que o uso da palavra-chave "this" tem a função de eliminar a confusão entre atributos de classe e parâmetros de métodos com o mesmo nome.<br>
+<br>
+Além disso, os atributos de uma classe podem ser outras classes, ou seja, podem armazenar objetos de outras classes. A exemplo da classe Empresa criada abaixo:<br>
+</p>
+
+```
+import Endereco from "./endereco"
+
+export default class Empresa {
+    public razaoSocial: string
+    public nomeFantasia: string
+    public cnpj: string
+    public endereco: Endereco
+
+    constructor(endereco: Endereco, razaoSocial: string, nomeFantasia: string, cnpj: string){
+        this.nomeFantasia = nomeFantasia
+        this.razaoSocial = razaoSocial
+        this.cnpj = cnpj
+        this.endereco = endereco
+    }
+}
+```
+
+<p align="justify">No paradigma de programação orientada à objetos é possível criar componentes reutilizáveis!</p>
+
+## Representação UML
+
 
 ## Referências:
 
