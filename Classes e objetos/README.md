@@ -257,7 +257,7 @@ usuários (programadores) exemplos de modelagem expressivos prontos para uso.<br
 Para o exemplo usado neste tema (Empresa>Telefone>Endereço), o diagrama fica da seguinte forma:<br>
 </p>
 
-<img src="imagens/UML-diagram.png" width="100%" height="100%">
+<img src="UML Diagram.png" width="100%" height="100%">
 
 ## Referências:
 
