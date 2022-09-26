@@ -47,8 +47,73 @@ Lembrando que encapsular não significa nunca mais acessar, mas sim acessar com 
 encapsulamento é modificar a forma de acesso aos dados. O modificador <i>private</i> bloqueia completamente a visibilidade de um membro da classe a qualquer código fora do próprio corpo da classe.<br>
 </p>
 
+→ [Voltar ao topo](#topo)
+
 ## MÉTODOS GET E SET
 
-<p>[Em construção]</p>
+<p align="justify">Existem várias convenções entre os desenvolvedores que utilizam o paradigma de programação orientada à objetos. Uma delas é o uso de métodos get e set. A convenção está na 
+nomenclatura dos métodos.<br>
+<br>
+<b>Métodos <i>get/set</i></b> são usados para <b>acessar propriedades privadas</b> e também outros valores que devam ser calculados.<br>
+<br>
+Segue um exemplo de aplicação desses métodos:<br> 
+</p>
+
+<p align="center">
+<img src="get-set.jpeg" width="80%" height="80%">
+</p>
+
+<p align="justify">Este tipo de implementação permite o acesso aos métodos como se fossem propriedades.<br>
+</p>
+
+→ [Voltar ao topo](#topo)
+
+## Campos readonly
+
+<p align="justify">Campos <i>readonly</i> (somente leitura) são propriedades que podem ser acessadas (ter seu valor lido), mas não podem ser modificadas, ou seja, ter seu valor alterado por códigos externos à classe.<br>
+<br>
+A atribuição de valor para um campo do tipo readonly pode ser feita no momento de sua declaração ou no método construtor.<br>
+<br>
+Usar o modificador de acesso readonly ajuda a diminuir o código da classe, pois não é preciso privar o campo para sua proteção e, também, declarar um método para obter seu valor.<br>
+<br>
+<b>OUTRA VANTAGEM DO ENCAPSULAMENTO</b>:<br>
+<br>
+O encapsulamento pode melhorar o tratamento e manutenção da qualidade dos dados. A exemplo do código abaixo, antes do atributo ser preenchido ou lido ocorre um “tratamento”:<br>
+</p>
+
+<p align="center">
+<img src="tratamento.jpeg" width="80%" height="80%">
+</p>
+
+→ [Voltar ao topo](#topo)
+
+## Verificação Strict
+
+<p align="justify">O transcompilador TypeScript (arquivo tsconfig.json) possui várias configurações, dentre elas existe a opção de verificação <i>strict</i>. Quando esta opção está habilitada, o transcompilador não permite que uma classe tenha campos declarados sem a certeza de sua inicialização na construção do objeto.<br>
+</p>
+
+<p align="center">
+<img src="strict.jpeg" width="80%" height="80%">
+</p>
+
+→ [Voltar ao topo](#topo)
+
+## Asserção de atribuição definitiva
+
+<p align="justify">A asserção de atribuição definitiva (<i>definite assignment assertion</i>) é um recurso que permite forçar a declaração de um campo, em uma 
+classe, mesmo que ele não tenha inicialização durante a construção do objeto.
+Para isso, adiciona-se um sinal de <b>!</b>, na declaração do campo:<br>
+<br>
+Antes:</p>
+
+<p align="center">
+<img src="atribuicao_antes.jpeg" width="80%" height="80%">
+</p>
+
+<p align="justify">Depois:<br></p>
+
+<p align="center">
+<img src="atribuicao_depois.jpeg" width="80%" height="80%">
+</p>
 
 → [Voltar ao topo](#topo)
