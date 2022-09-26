@@ -34,7 +34,7 @@ Os atributos privados deixam de ser visíveis para fora do objeto e portanto, n�
 </p>
 
 <p align="center">
-<img src="encapsulamento.jpg" width="80%" height="80%">
+<img src="Imagens/encapsulamento.jpg" width="100%" height="100%">
 </p>
 
 <p align="justify">Para a linguagem TypeScript existem três modificadores de acesso: <i>private</i>, <i>protected</i> e <i>public</i>. A visibilidade padrão dos membros de uma classe é pública, ou seja, modificada pela palavra-chave "public". Um membro público pode ser acessado em qualquer lugar.<br>
@@ -60,7 +60,7 @@ Segue um exemplo de aplicação desses métodos:<br>
 </p>
 
 <p align="center">
-<img src="get-set.jpeg" width="80%" height="80%">
+<img src="Imagens/get-set.jpg" width="100%" height="100%">
 </p>
 
 <p align="justify">Este tipo de implementação permite o acesso aos métodos como se fossem propriedades.<br>
@@ -82,7 +82,7 @@ O encapsulamento pode melhorar o tratamento e manutenção da qualidade dos dado
 </p>
 
 <p align="center">
-<img src="tratamento.jpeg" width="80%" height="80%">
+<img src="Imagens/tratamento.jpg" width="60%" height="60%">
 </p>
 
 → [Voltar ao topo](#topo)
@@ -93,7 +93,7 @@ O encapsulamento pode melhorar o tratamento e manutenção da qualidade dos dado
 </p>
 
 <p align="center">
-<img src="strict.jpeg" width="80%" height="80%">
+<img src="Imagens/strict.jpg" width="100%" height="100%">
 </p>
 
 → [Voltar ao topo](#topo)
@@ -107,13 +107,13 @@ Para isso, adiciona-se um sinal de <b>!</b>, na declaração do campo:<br>
 Antes:</p>
 
 <p align="center">
-<img src="atribuicao_antes.jpeg" width="80%" height="80%">
+<img src="Imagens/atribuicao_antes.jpg" width="60%" height="60%">
 </p>
 
 <p align="justify">Depois:<br></p>
 
 <p align="center">
-<img src="atribuicao_depois.jpeg" width="80%" height="80%">
+<img src="Imagens/atribuicao_depois.jpg" width="60%" height="60%">
 </p>
 
 → [Voltar ao topo](#topo)
