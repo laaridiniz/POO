@@ -48,7 +48,6 @@ No exemplo encontrado a seguir, é possível perceber que a classe Soma deriva d
 export default abstract class Calculo {
     public abstract calcular(numero1: number, numero2: number): number;
 }
-
 ```
 
 <br>
@@ -63,6 +62,18 @@ export default class Soma extends Calculo {
 }
 ```
 
+<br>
+
+```
+import Calculo from "./calculo";
+
+export default class Subtracao extends Calculo {
+    public calcular(numero1: number, numero2: number): number {
+        return numero1 - numero2
+    }
+}
+```
+
 → [Voltar ao topo](#topo)
 
 ## Abstract
@@ -72,13 +83,75 @@ export default class Soma extends Calculo {
 O abstract, então, transforma um método em abstrato. Métodos abstratos só podem ser declarados dentro de classes abstratas. Este tipo de método é declarado sem corpo, porque é um abstração! O corpo deve ser fornecido pela subclasse.<br>
 </p>
 
-→ [Voltar ao topo](#topo)
-
 ## Extends
 
 <p align="justify">Em TypeScript, a palavra-chave extends é usada para indicar que uma classe, que está sendo definida, é derivada de uma classe base, usando herança. Então, basicamente, a palavra-chave extends é usada para estender a funcionalidade de uma superclasse para uma subclasse.<br>
 <br>
 Uma classe filha tem todas as propriedades e métodos de sua classe pai e também pode definir membros adicionais.<br>
 </p>
+
+→ [Voltar ao topo](#topo)
+
+## Execução
+
+<p align="justify">Para executar um método polimórfico neste exemplo, basta criar uma variável cálculo e, a partir dela, criar um objeto específico para a operação desejada. Feito isso, será necessário acionar o método passando os argumentos, conforme ilustrado abaixo: <br></p>
+
+```
+import Soma from "./soma";
+import Subtracao from "./subtracao";
+
+let calculo = new Soma()
+console.log(calculo.calcular(10,5))
+
+calculo = new Subtracao()
+console.log(calculo.calcular(20,8))
+```
+
+Obs.: O método calcular() se comporta, portanto, de modo polimórfico.
+
+→ [Voltar ao topo](#topo)
+
+## Sobrescrever métodos
+
+<p align="justify">Sobrescrever métodos significa alterar seu comportamento durante a herança. Qualquer método pode ser sobrescrito, desde que não seja bloqueado, explicitamente, contra sobrescrição.<br>
+<br>
+Na sobrescrição, a assinatura do método deve ser sempre respeitada! Do contrário, não se estará sobrescrevendo, mas sim, criando um método novo.<br>
+<br>
+Obs.: Uma assinatura de método faz parte da declaração do método. É a combinação do nome do método e da lista de parâmetros.<br>
+<br>
+</p>
+
+→ [Voltar ao topo](#topo)
+
+## Parâmetros x Argumentos
+
+<p align="justify">Parâmetros são as variáveis, locais, que são usadas para passar valor para dentro dos métodos:<br></p>
+
+```
+ public calcular(numero1: number, numero2: number): number {
+        return numero1 + numero2
+    }
+```
+
+<p align="justify">Por outro lado, argumentos são os valores que são passados para dentro dos métodos, passados através das variáveis:<br></p>
+
+```
+let calculo = new Soma()
+console.log(calculo.calcular(10,5))
+```
+
+→ [Voltar ao topo](#topo)
+
+## Classes abstratas
+
+<p align="justify">Lembre-se que não é possível criar um objeto diretamente de uma classe abstrata. Uma classe abstrata pode ter métodos não abstratos, eles também 
+serão herdados, caso ocorra aplicação da herança para uma subclasse.<br>
+<br>
+Na classe abstrata também pode-se aplicar os modificadores de acesso, como o private e o public.<br>
+</p>
+
+## Herança
+
+<p align="justify">Herança é um dos aspectos mais importantes do paradigma de programação orientada à objetos.  chave para entender a herança é que ela fornece a reutilização do código. Ao invés de escrever o mesmo código, repetidamente, pode-se simplesmente herdar as propriedades de uma classe para a outra. A herança pode acontecer mesmo que a superclasse não seja abstrata!<br></p>
 
 → [Voltar ao topo](#topo)
